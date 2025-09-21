@@ -1,4 +1,3 @@
-// src/components/TipSelector/CustomInput.tsx
 import React from "react";
 import { Input } from "../UI/Input";
 
@@ -17,7 +16,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
       value={value}
       onChange={onChange}
       placeholder="Custom"
-      className="custom-input"
+      className="custom-input cursor-pointer"
       min="0"
     />
   );
