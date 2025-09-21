@@ -19,7 +19,10 @@ export default function Home() {
   } = useTipCalculator();
 
   return (
-    <div className="min-h-screen bg-grey-200 flex flex-col items-center justify-center p-4 md:p-8">
+    <div
+      className="min-h-screen bg-grey-200 flex flex-col items-center justify-center p-4 md:p-8"
+      suppressHydrationWarning
+    >
       <div className="text-center mb-6 md:mb-8">
         <h1 className="text-green-900 text-xl md:text-2xl font-bold tracking-wider leading-tight">
           SPLI
