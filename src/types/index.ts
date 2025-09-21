@@ -12,3 +12,4 @@ export interface CalculationResult {
 }
 
 export type TipPercentage = 5 | 10 | 15 | 25 | 50
+export { Results } from '../components/ResultsDisplay/Results'
