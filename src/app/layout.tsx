@@ -13,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-[var(--font-family-space-mono)]">{children}</body>
+      <body
+        className="font-[var(--font-family-space-mono)]"
+        suppressHydrationWarning
+      >
+        {children}
+      </body>
     </html>
   );
 }
