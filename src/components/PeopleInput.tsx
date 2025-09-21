@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Input } from "./UI/Input";
 
 interface PeopleInputProps {
@@ -38,7 +39,9 @@ export const PeopleInput: React.FC<PeopleInputProps> = ({
           Number of People
         </label>
         {showError && (
-          <span className="text-red-500 text-xs font-bold">Can't be zero</span>
+          <span className="text-red-500 text-xs font-bold">
+            Can&apos;t be zero
+          </span>
         )}
       </div>
       <Input
@@ -49,7 +52,7 @@ export const PeopleInput: React.FC<PeopleInputProps> = ({
         min="1"
         step="1"
         icon={
-          <img
+          <Image
             src="/images/icon-person.svg"
             alt="Person icon"
             className="w-3 h-4"

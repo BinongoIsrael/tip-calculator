@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Input } from "./UI/Input";
+import Image from "next/image";
 
 interface BillInputProps {
   value: number;
@@ -33,7 +34,9 @@ export const BillInput: React.FC<BillInputProps> = ({ value, onChange }) => {
       <div className="flex justify-between items-center">
         <label className="block text-grey-500 text-sm font-bold">Bill</label>
         {showError && (
-          <span className="text-red-500 text-xs font-bold">Can't be zero</span>
+          <span className="text-red-500 text-xs font-bold">
+            Can&apos;t be zero
+          </span>
         )}
       </div>
       <Input
@@ -44,7 +47,7 @@ export const BillInput: React.FC<BillInputProps> = ({ value, onChange }) => {
         min="0"
         step="0.01"
         icon={
-          <img
+          <Image
             src="/images/icon-dollar.svg"
             alt="Dollar icon"
             className="w-3 h-4"
