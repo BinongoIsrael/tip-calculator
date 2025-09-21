@@ -1,8 +1,8 @@
 import React from "react";
 
 interface InputProps {
-  type?: "number";
-  value: number;
+  type?: "text" | "number";
+  value: string | number;
   onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
@@ -24,7 +24,7 @@ export const Input: React.FC<InputProps> = ({
   return (
     <div className="relative">
       {icon && (
-        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-grey-400 text-input font-bold">
+        <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-grey-400 text-[24px] font-bold">
           {icon}
         </span>
       )}

@@ -2,7 +2,7 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick: () => void;
   disabled?: boolean;
-  variant?: "primary" | "tip" | "tip-active"; // Removed secondary
+  variant?: "primary" | "tip" | "tip-active";
   className?: string;
 }
 
@@ -17,10 +17,10 @@ export const Button: React.FC<ButtonProps> = ({
     switch (variant) {
       case "primary":
         return disabled
-          ? "bg-grey-200 text-grey-400 cursor-not-allowed" // Better disabled state
-          : "bg-green-400 text-green-900 hover:bg-green-400/80";
+          ? "bg-grey-200 text-green-90/80 cursor-not-allowed"
+          : "bg-green-400 text-green-900 hover:bg-green-400/80 cursor-pointer";
       case "tip":
-        return "bg-green-900 text-white hover:bg-green-400 hover:text-green-900";
+        return "bg-green-900 text-white hover:bg-(--color-grey-200) hover:text-green-900 cursor-pointer";
       case "tip-active":
         return "bg-green-400 text-green-900";
       default:
